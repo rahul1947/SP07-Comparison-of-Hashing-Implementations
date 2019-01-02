@@ -1,0 +1,39 @@
+Implementation of data structures and algorithms
+Fall 2018
+Short Project 7: Comparison of hashing implementations
+Thu, Oct 11, 2018
+
+Version 1.0: Initial description (Thu, Oct 11).
+
+Due: 11:59 PM, Sun, Oct 21.
+
+Submission procedure:
+
+* Create a folder whose name is your netid (NId). 
+* Place all files you are submitting in that folder. 
+* Use "package NId;" in all your java files.
+* Include the class files also in your zip file.
+* Include a text file named "readme.txt", that explains how to compile and run the code.
+* Zip the contents into a single zip or rar file.
+* If the zip file is bigger than 1 MB, you have included unnecessary files.
+* Delete them and create the zip file again.
+* Upload the zip or rar file on elearning. 
+* Submission can be revised before the deadline. 
+* The final submission before the deadline will be graded.
+* Only one member of each team needs to submit project. 
+* Include the names of all team members in ALL files.
+
+
+Note that teams have changed.
+
+Team task: 
+
+1. Implement one or more hashing algorithms from the following:
+	Double hashing / Robin Hood / Hopscotch / Cuckoo
+   Compare its/their performance with Java's HashMap/HashSet on millions of
+   operations: add, contains, and remove.
+
+   Generate an array of random integers, and calculate how many distinct
+   numbers it has:  static<T> int distinctElements(T[ ] arr) { ... }
+   Compare running times of HashSet and your hashing implementation, for large n.
+
