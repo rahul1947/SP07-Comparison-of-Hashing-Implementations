@@ -154,10 +154,10 @@ public class Cuckoo<T> {
 				(x.equals(hashTable[location][cell].element))) {
 				
 				return true;
+			}
 		}
+		return false;
 	}
-	return false;
-}
 
 	/**
 	 * Removes the specified element from this set if it is present.
@@ -178,12 +178,12 @@ public class Cuckoo<T> {
 				(x.equals(hashTable[location][cell].element))) {
 				
 				hashTable[location][cell] = null;
-			size--;
-			return true;
+				size--;
+				return true;
+			}
 		}
+		return false;
 	}
-	return false;
-}
 
 	// Returns the number of elements in the table.
 	public int size() {
