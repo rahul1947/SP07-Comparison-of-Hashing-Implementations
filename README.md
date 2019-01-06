@@ -14,18 +14,20 @@ _______________________________________________________________________________
 #### A. Team Task: 
 
 **Problem 1.**
-a. Implement one or more hashing algorithms from the following:
-	Double hashing / Robin Hood / Hopscotch / Cuckoo
-   Compare its/their performance with Java's HashMap/HashSet on millions of
-   operations: add, contains, and remove.
+a. Implement one or more hashing algorithms from the following: 
+   Double hashing / Robin Hood / Hopscotch / Cuckoo
+   
+   Compare its/their performance with Java's HashMap/HashSet on millions of operations: add, contains, and remove.
 
 **Solution:** 
-[Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
-[Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
-[Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
+1. [Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
+2. [Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
+3. [Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
 
-b. Generate an array of random integers, and calculate how many distinct
-   numbers it has:  static<T> int distinctElements(T[ ] arr) { ... }
+b. Generate an array of random integers, and calculate how many distinct numbers it has: 
+```
+static<T> int distinctElements(T[ ] arr) { ... } 
+```
    Compare running times of HashSet and your hashing implementation, for large n.
 
 
