@@ -1,4 +1,4 @@
-package rsn170330.sp07;
+package rsn170330;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import java.util.Set;
  * 
  * Date: January 4, 2019
  */
-public class HashingDriver1  {
+public class HashingDriver1 {
 	
 	static DoubleHashing<Integer> dh = new DoubleHashing<>();
 	static RobinHood<Integer> rh = new RobinHood<>();
@@ -37,6 +37,7 @@ public class HashingDriver1  {
 		}
 		if (args.length > 2) {
 			verbose = Boolean.parseBoolean(args[2]);
+			System.out.format("%-10.10s%-10.10s%.10s%1.1s", "Operation ", "Operand ", "Result", "\n");
 		}
 		
 		Timer timer = new Timer();
@@ -60,8 +61,7 @@ public class HashingDriver1  {
 						result = (result + 1) % modValue;
 					}
 					if (verbose) {
-						System.out.format("%-10s%-12s%-12s", "Add", " " + operand, " " 
-							+ result + "\n");
+						System.out.format("%-10.10s%-10.10s%.10s%1.1s", "Add ", " "+operand, " "+result, "\n");
 					}
 					break;
 				}
@@ -81,8 +81,7 @@ public class HashingDriver1  {
 						result = (result + 1) % modValue;
 					}
 					if (verbose) {
-						System.out.format("%-10s%-12s%-12s", "Remove", " " + operand, " " 
-							+ result + "\n");
+						System.out.format("%-10.10s%-10.10s%.10s%1.1s", "Remove ", " "+operand, " "+result, "\n");
 					}
 					break;
 				}
@@ -102,8 +101,7 @@ public class HashingDriver1  {
 						result = (result + 1) % modValue;
 					}
 					if (verbose) {
-						System.out.format("%-10s%-12s%-12s", "Contains", " " + operand, " " 
-							+ result + "\n");
+						System.out.format("%-10.10s%-10.10s%.10s%1.1s", "Contains ", " "+operand, " "+result, "\n");
 					}
 					break;
 				}
