@@ -26,23 +26,23 @@ a. Implement one or more hashing algorithms from the following:
 
 ```
 Sample Run: 
-**rahul:test$** javac rsn170330/*.java
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 0
+$ javac rsn170330/*.java
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 0
 HashSet result: 721
 HashSet size: 499
 Time: 16 msec.
 Memory: 3 MB / 117 MB.
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 1
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 1
 Double Hashing result: 721
 Double Hashing size: 499
 Time: 17 msec.
 Memory: 3 MB / 117 MB.
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 2
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 2
 Robin Hood result: 721
 Robin Hood size: 499
 Time: 18 msec.
 Memory: 3 MB / 117 MB.
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 3
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 3
 Cuckoo Hashing result: 721
 Cuckoo Hashing size: 499
 Time: 15 msec.
@@ -51,10 +51,9 @@ Memory: 3 MB / 117 MB.
 ```
 ```
 For verbose you can use:
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 0 true > sp07-t06-verbose.txt
-rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 3 true > sp07-t06-cuckoo.txt
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 0 true > sp07-t06-verbose.txt
+$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 3 true > sp07-t06-cuckoo.txt
 ```
-
 ```
 +----------------------------------------------------------------------------------------------------------------+
 | Test        |  No of   |     Java HashSet    |    Double Hashing   |  Robin Hood Hashing |    Cuckoo Hashing   |
