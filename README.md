@@ -19,7 +19,10 @@ a. Implement one or more hashing algorithms from the following:
    Compare its/their performance with Java's HashMap/HashSet on millions of
    operations: add, contains, and remove.
 
-**Solution:** [Double Hashing] [Robin Hood Hashing] [Cuckoo Hashing]
+**Solution:** 
+[Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
+[Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
+[Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
 
 b. Generate an array of random integers, and calculate how many distinct
    numbers it has:  static<T> int distinctElements(T[ ] arr) { ... }
