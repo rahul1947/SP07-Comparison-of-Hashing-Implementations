@@ -1,14 +1,15 @@
 package rsn170330.sp07;
 
+import java.util.Iterator;
+
 /**
  * CS 5V81.001: Implementation of Data Structures and Algorithms
  * Short Project SP07: Double Hashing Implementation
  * Team SP43:
  * @author Rahul Nalawade (rsn170330)
- * @author Arunachalam Saravanan (axs170081)
+ * 
+ * Date: October 21, 2018
  */
-
-import java.util.Iterator;
 
 /**
  * Implement one or more hashing algorithms from the following: Double hashing /

@@ -8,10 +8,10 @@ import java.util.Set;
 
 /**
  * CS 5V81.001: Implementation of Data Structures and Algorithms
- * Short Project SP07: Double Hashing Implementation
+ * Short Project SP07: Comparison of Hashing Implementations
  * @author Rahul Nalawade
  * 
- * Jan 4, 2019
+ * Date: January 4, 2019
  */
 public class HashingDriver  {
     
@@ -60,7 +60,7 @@ public class HashingDriver  {
                         result = (result + 1) % modValue;
                     }
                     if (verbose) {
-                        System.out.println("Add " + operand + "\t" + result);
+                    	System.out.format("%-10s%-12s%-12s", "Add", " " + operand, " " + result + "\n");
                     }
                     break;
                 }
@@ -80,7 +80,7 @@ public class HashingDriver  {
                         result = (result + 1) % modValue;
                     }
                     if (verbose) {
-                        System.out.println("Remove " + operand + "\t" + result);
+                    	System.out.format("%-10s%-12s%-12s", "Remove", " " + operand, " " + result + "\n");
                     }
                     break;
                 }
@@ -100,7 +100,7 @@ public class HashingDriver  {
                         result = (result + 1) % modValue;
                     }
                     if (verbose) {
-                        System.out.println("Contains " + operand + "\t" + result);
+                    	System.out.format("%-10s%-12s%-12s", "Contains", " " + operand, " " + result + "\n");
                     }
                     break;
                 }
@@ -109,20 +109,20 @@ public class HashingDriver  {
             }
         }
         if (choice == 1) {
-            System.out.println("Double Hashing result : "+ result);
-            System.out.println("Double Hashing size : "+ dh.size());
+            System.out.println("Double Hashing result: " + result);
+            System.out.println("Double Hashing size: " + dh.size());
             
         } else if (choice == 2) {
-            System.out.println("Robin Hood result : "+ result);
-            System.out.println("Robin Hood size : "+ rh.size());
+            System.out.println("Robin Hood result: " + result);
+            System.out.println("Robin Hood size: " + rh.size());
             
         } else if (choice == 3) {
-            System.out.println("Cuckoo Hashing result : "+ result);
-            System.out.println("Cuckoo Hashing size : "+ ch.size());
+            System.out.println("Cuckoo Hashing result: " + result);
+            System.out.println("Cuckoo Hashing size: " + ch.size());
             
         } else {
-            System.out.println("HashSet result : "+ result);
-            System.out.println("HashSet size : "+ hs.size());
+            System.out.println("HashSet result: " + result);
+            System.out.println("HashSet size: " + hs.size());
         }
         System.out.println(timer.end());
     }

@@ -1,23 +1,16 @@
 package rsn170330.sp07;
 
-import java.util.Random;
-
 /**
  * CS 5V81.001: Implementation of Data Structures and Algorithms
  * Short Project SP07: Robin Hood Hashing Implementation
- * 
  * @author Rahul Nalawade (rsn170330)
- * Date: Jan 04, 2018
+ * 
+ * Date: January 04, 2018
  */
-
-// Hash table implementation using the Robin Hood hashing algorithm.
 public class RobinHood<T> {
 	
 	Object[] table; // The hash table.
-
-	// The largest displacement of any element.
-	int maxDisp;
-	
+	int maxDisp; // The largest displacement of any element.
 	int size; // The size of the table.
 
 	// Initializes new hash table using Robin Hood.
@@ -28,11 +21,11 @@ public class RobinHood<T> {
 	}
 
 	/**
-	 * Adds x to the table.
-	 *
-	 * @param x the element to add
-	 * @return true if x is not in the table, false otherwise
-	 */
+     * Adds the specified element to this set if it is not already present.
+     * 
+     * @param x the element to be added
+     * @return true if successful insertion, false otherwise
+     */
 	public boolean add(T x) {
 		if (size >= table.length / 2) {
 			resize();
@@ -66,11 +59,10 @@ public class RobinHood<T> {
 	}
 
 	/**
-	 * Returns true if x is in the table.
-	 *
-	 * @param x the element to find
-	 * @return true if x is in the table, false otherwise
-	 */
+     * If x is there is the Collection.
+     * @param x the input element
+     * @return true if present, false otherwise
+     */
 	public boolean contains(T x) {
 		int loc = hash(x);
 		for (int d = 0; d <= maxDisp; d++) {
@@ -83,10 +75,9 @@ public class RobinHood<T> {
 	}
 
 	/**
-	 * Removes x from the table.
-	 *
-	 * @param x the element to remove
-	 * @return true if x was successfully removed, false otherwise
+	 * Removes the specified element from this set if it is present.
+	 * @param x the element to be removed
+	 * @return true, if successfully removed, false otherwise
 	 */
 	public boolean remove(T x) {
 		int loc = hash(x);
@@ -132,7 +123,7 @@ public class RobinHood<T> {
 	 */
 	private int displacement(T x, int loc) {
 		int h = hash(x);
-		return loc >= h ? loc - h : table.length + loc - h;
+		return (loc >= h) ? (loc - h) : (table.length + loc - h);
 	}
 
 	/**

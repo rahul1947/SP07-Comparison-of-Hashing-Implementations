@@ -15,7 +15,7 @@ _______________________________________________________________________________
 
 **Problem 1.**
 a. Implement one or more hashing algorithms from the following: 
-   Double hashing / Robin Hood / Hopscotch / Cuckoo
+   Double hashing / Robin Hood / Hopscotch / Cuckoo Hashing.
    
    Compare its/their performance with Java's HashMap/HashSet on millions of operations: add, contains, and remove.
 
@@ -23,6 +23,7 @@ a. Implement one or more hashing algorithms from the following:
 1. [Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
 2. [Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
 3. [Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
+
 
 b. Generate an array of random integers, and calculate how many distinct numbers it has: 
 ```
