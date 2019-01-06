@@ -186,13 +186,13 @@ public class Cuckoo<T> {
 }
 
 	// Returns the number of elements in the table.
-public int size() {
-	return size;
-}
+	public int size() {
+		return size;
+	}
 
 	// Rehashing will double the table size, re-inserting the elements
-private void rehash() {
-	Entry<T>[][] temp = hashTable;
+	private void rehash() {
+		Entry<T>[][] temp = hashTable;
 		size = 0; // as a new hash table is to be created
 		capacity = capacity * 2;
 		hashTable = new Entry[capacity][k]; 
