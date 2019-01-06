@@ -26,7 +26,7 @@ a. Implement one or more hashing algorithms from the following:
 
 ```
 Sample Run: 
-rahul:test$ javac rsn170330/*.java
+**rahul:test$** javac rsn170330/*.java
 rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 0
 HashSet result: 721
 HashSet size: 499
@@ -49,8 +49,8 @@ Time: 15 msec.
 Memory: 3 MB / 117 MB.
 
 ```
-For verbose you can use:
 ```
+For verbose you can use:
 rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 0 true > sp07-t06-verbose.txt
 rahul:test$ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 3 true > sp07-t06-cuckoo.txt
 ```
