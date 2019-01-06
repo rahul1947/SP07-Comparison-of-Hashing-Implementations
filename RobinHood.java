@@ -21,11 +21,11 @@ public class RobinHood<T> {
 	}
 
 	/**
-     * Adds the specified element to this set if it is not already present.
-     * 
-     * @param x the element to be added
-     * @return true if successful insertion, false otherwise
-     */
+	 * Adds the specified element to this set if it is not already present.
+	 * 
+	 * @param x the element to be added
+	 * @return true if successful insertion, false otherwise
+	 */
 	public boolean add(T x) {
 		if (size >= table.length / 2) {
 			resize();
@@ -59,10 +59,10 @@ public class RobinHood<T> {
 	}
 
 	/**
-     * If x is there is the Collection.
-     * @param x the input element
-     * @return true if present, false otherwise
-     */
+	 * If x is there is the Collection.
+	 * @param x the input element
+	 * @return true if present, false otherwise
+	 */
 	public boolean contains(T x) {
 		int loc = hash(x);
 		for (int d = 0; d <= maxDisp; d++) {
@@ -138,5 +138,17 @@ public class RobinHood<T> {
 			return (x.hashCode() + 1) % table.length + table.length - 1;
 		}
 		return x.hashCode() % table.length;
+	}
+
+	/**
+	 * Calculate distinct elements in an array
+	 * @param arr: Array of Integers which may or may not have duplicates.
+	 * @return: returns the count of distinct elements in the provided array.
+	 */
+	public static<T> int distinctElements(T[] arr){
+		RobinHood<T> dist = new RobinHood<>();
+		
+		for (T e : arr) { dist.add(e);}
+		return dist.size();
 	}
 }

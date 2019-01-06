@@ -1,14 +1,13 @@
 package rsn170330.sp07;
 
 /**
- * Timer class for roughly calculating running time of programs
- * 
- * @author rahul
- * 
- *         Usage: Timer timer = new Timer(); timer.start(); timer.end();
- *         System.out.println(timer); // output statistics
- *
- */
+* Timer class for roughly calculating running time of programs
+* @author rbk
+* @author Rahul Nalawade (rsn170330)
+* 
+* Usage: Timer timer = new Timer(); timer.start(); timer.end();
+* System.out.println(timer); // output statistics
+*/
 public class Timer {
 	long startTime, endTime, elapsedTime, memAvailable, memUsed;
 
@@ -29,9 +28,7 @@ public class Timer {
 	}
 
 	public String toString() {
-		return "Time: " + elapsedTime + " msec.\n" + "Memory: " + (memUsed / 1048576) + " MB / "
-				+ (memAvailable / 1048576) + " MB.";
+		return "Time: " + elapsedTime + " msec.\n" + "Memory: " + (memUsed / 1048576) + 
+		" MB / " + (memAvailable / 1048576) + " MB.";
 	}
-
-	
 }

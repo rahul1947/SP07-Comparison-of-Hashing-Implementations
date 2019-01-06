@@ -59,18 +59,18 @@ public class Cuckoo<T> {
 		switch (i) {
 			case 1:
 				// Hash Function 1
-				return indexFor(hash(x.hashCode()), hashTable.length); 
+			return indexFor(hash(x.hashCode()), hashTable.length); 
 			default:
 				// Hash Function 2, for i > 1  
-				return (hashFunction(1,x) + i * (1 + x.hashCode() % 9)) % hashTable.length;
+			return (hashFunction(1,x) + i * (1 + x.hashCode() % 9)) % hashTable.length;
 		}
 	}
 	
 	/**
-     * Adds the specified element to this set if it is not already present.
-     * @param x the element to be added
-     * @return true if successful insertion, false otherwise
-     */
+	 * Adds the specified element to this set if it is not already present.
+	 * @param x the element to be added
+	 * @return true if successful insertion, false otherwise
+	 */
 	public boolean add(T x) {
 		double fraction = 0;
 		// Reject Duplicates
@@ -137,10 +137,10 @@ public class Cuckoo<T> {
 	}
 	
 	/**
-     * If x is there is the Collection.
-     * @param x the input element
-     * @return true if present, false otherwise
-     */
+	 * If x is there is the Collection.
+	 * @param x the input element
+	 * @return true if present, false otherwise
+	 */
 	public boolean contains(T x) {
 		int i = 1;
 		int cell = 0;
@@ -154,11 +154,11 @@ public class Cuckoo<T> {
 				(x.equals(hashTable[location][cell].element))) {
 				
 				return true;
-			}
 		}
-		return false;
 	}
-	
+	return false;
+}
+
 	/**
 	 * Removes the specified element from this set if it is present.
 	 * @param x the element to be removed
@@ -178,27 +178,26 @@ public class Cuckoo<T> {
 				(x.equals(hashTable[location][cell].element))) {
 				
 				hashTable[location][cell] = null;
-				size--;
-				return true;
-			}
+			size--;
+			return true;
 		}
-		return false;
 	}
-	
+	return false;
+}
+
 	// Returns the number of elements in the table.
-	public int size() {
-		return size;
-	}
+public int size() {
+	return size;
+}
 
 	// Rehashing will double the table size, re-inserting the elements
-	private void rehash() {
-		Entry<T>[][] temp = hashTable;
+private void rehash() {
+	Entry<T>[][] temp = hashTable;
 		size = 0; // as a new hash table is to be created
 		capacity = capacity * 2;
 		hashTable = new Entry[capacity][k]; 
 		threshold = (int) Math.log((double) capacity);
-				
-		//System.out.println("<-- Creating New Hash table -->");
+		
 		int location = 0;
 		int cell = 0;
 		Entry<T> e = null;
@@ -219,10 +218,10 @@ public class Cuckoo<T> {
 	public void printHashTable2() {
 		System.out.println("\nHash Table: ");
 		System.out.format("%40s", "+--------------------------------------+\n");
-        System.out.format("%-11s%-14s%-13s%-2s", "| Location", "| Cell 1", "| Cell 2", " |\n");
-        System.out.println("|--------------------------------------|");
-        
-        int location = 0;
+		System.out.format("%-11s%-14s%-13s%-2s", "| Location", "| Cell 1", "| Cell 2", " |\n");
+		System.out.println("|--------------------------------------|");
+		
+		int location = 0;
 		while (location < hashTable.length) {
 			Entry<T> c1 = hashTable[location][0];
 			Entry<T> c2 = hashTable[location][1];
@@ -230,25 +229,41 @@ public class Cuckoo<T> {
 			
 			if (c1 != null) {
 				if (c2 != null) {
-					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " + c1.element, "| " + c2.element, " |\n");
+					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " 
+						+ c1.element, "| " + c2.element, " |\n");
 				}
 				else {
-					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " + c1.element, "| " + nothing, " |\n");
+					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " 
+						+ c1.element, "| " + nothing, " |\n");
 				}
 			}
 			else { 
 				if (c2 != null) {
-					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " + nothing, "| " + c2.element, " |\n");
+					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " 
+						+ nothing, "| " + c2.element, " |\n");
 				}
 				else {
-					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " + nothing, "| " + nothing, " |\n");
+					System.out.format("%-11s%-14s%-13s%-2s", "| "+ location, "| " 
+						+ nothing, "| " + nothing, " |\n");
 				}
 			}
 			location++;
 		}
-        
-        System.out.format("%40s","+--------------------------------------+\n\n");
-        System.out.println("Size = " + size + " Capacity = " + capacity);
+		
+		System.out.format("%40s","+--------------------------------------+\n\n");
+		System.out.println("Size = " + size + " Capacity = " + capacity);
+	}
+
+	/**
+	 * Calculate distinct elements in an array
+	 * @param arr: Array of Integers which may or may not have duplicates.
+	 * @return: returns the count of distinct elements in the provided array.
+	 */
+	public static<T> int distinctElements(T[] arr){
+		Cuckoo<T> dist = new Cuckoo<>();
+		
+		for (T e : arr) { dist.add(e); }
+		return dist.size();
 	}
 	
 	//-------------------------- MAIN METHOD ----------------------------------
@@ -263,7 +278,8 @@ public class Cuckoo<T> {
 		
 		System.out.println("Key \th1(x) \th2(x)");
 		for (int i = 0; i < N; i++) {
-			System.out.println(num[i] + "\t"+ ch.hashFunction(1, num[i]) + "\t"+ ch.hashFunction(2, num[i]));
+			System.out.println(num[i] + "\t" + ch.hashFunction(1, num[i]) + "\t" 
+				+ ch.hashFunction(2, num[i]));
 		}
 		
 		System.out.println("\nOperations Timeline: ");
@@ -274,19 +290,23 @@ public class Cuckoo<T> {
 			}
 			*/
 			if (operation[i] < 67) {
-				System.out.println("Add "+num[i]+" \t\t" + ch.add(num[i]) + " " + ch.size() + " " + ch.capacity);
+				System.out.println("Add "+num[i]+" \t\t" + ch.add(num[i]) + " " 
+					+ ch.size() + " " + ch.capacity);
 			}
 			else if (operation[i] < 84) {
-				System.out.println("Contains "+num[i]+" \t" + ch.contains(num[i]) + " " + ch.size() + " " + ch.capacity);
+				System.out.println("Contains "+num[i]+" \t" + ch.contains(num[i]) + " " 
+					+ ch.size() + " " + ch.capacity);
 			}
 			else {
-				System.out.println("Remove "+num[i]+" \t" + ch.remove(num[i]) + " " + ch.size() + " " + ch.capacity);
+				System.out.println("Remove "+num[i]+" \t" + ch.remove(num[i]) + " " 
+					+ ch.size() + " " + ch.capacity);
 			}
 		}
 		
 		System.out.println("\n\nKey \th1(x) \th2(x)");
 		for (int i = 0; i < N; i++) {
-			System.out.println(num[i] + "\t"+ ch.hashFunction(1, num[i]) + "\t"+ ch.hashFunction(2, num[i]));
+			System.out.println(num[i] + "\t" + ch.hashFunction(1, num[i]) + "\t" 
+				+ ch.hashFunction(2, num[i]));
 		}
 		
 		ch.printHashTable2();
