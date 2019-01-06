@@ -12,10 +12,11 @@ public class Cuckoo<T> {
 	int k; // Number of Hash functions
 	int capacity; // = length of the Hash Table = hashTable.length
 	Entry<T>[][] hashTable; // Version with 1 table and k hash functions
+	// NOTE: each location (row) can have k spots/ cells (columns)
 	
 	int size; // Number of actual elements in Hash Table
 	double loadFactor = 0.5; // open-addressing default
-	int threshold;
+	int threshold; // limit for no of replacements on collision 
 	
 	// Entry corresponding to an element in Hash Table
 	class Entry<E> {
@@ -31,7 +32,7 @@ public class Cuckoo<T> {
 		size = 0;
 		k = 3; 
 		capacity = 1024;
-		hashTable = new Entry[capacity][k]; 
+		hashTable = new Entry[capacity][k];
 		threshold = (int) Math.log((double) capacity);
 	}
 
@@ -81,6 +82,7 @@ public class Cuckoo<T> {
 		int location = hashFunction(i, x);
 		
 		// While we are able to find a free spot/ cell among k spots meant for x.
+		// just like finding/waiting for a full-time job from all applied job applications :P
 		while (i <= k) {
 			cell = i - 1;
 			location = hashFunction(i++, x);
@@ -130,7 +132,6 @@ public class Cuckoo<T> {
 		// Rebuild hash table with new hash functions.
 		fraction = (double) size / capacity;
 		if (loadFactor < fraction) {
-			//System.out.println("Check Point 03");
 			rehash();
 		}
 		return false;
@@ -214,7 +215,7 @@ public class Cuckoo<T> {
 		}
 	}
 	
-	// Prints the Hash Table for Cuckoo Hashing.
+	// Prints the Hash Table for Cuckoo Hashing with k = 2.
 	public void printHashTable2() {
 		System.out.println("\nHash Table: ");
 		System.out.format("%40s", "+--------------------------------------+\n");

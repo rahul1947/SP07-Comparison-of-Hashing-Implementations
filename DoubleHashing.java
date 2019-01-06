@@ -14,8 +14,8 @@ public class DoubleHashing<T> {
 	
 	private int size;
 	Entry<T>[] table;
-	private double loadFactor = 0.5;
-	int capacity = 1024;
+	private double loadFactor = 0.5; // default for open-addressing
+	int capacity;
 	
 	static class Entry<T>{
 		T element;
@@ -30,9 +30,11 @@ public class DoubleHashing<T> {
 	public DoubleHashing() {
 		this.table = new Entry[capacity];
 		this.size = 0;
+		this.capacity = 1024;
 	}
 	
 	public DoubleHashing(int initialSize) {
+		this.capacity = initialSize;
 		this.table = new Entry[initialSize];
 		this.size = 0;
 	}
@@ -46,7 +48,7 @@ public class DoubleHashing<T> {
 	}
 	
 	/**
-	 * Code extracted from Java's HashMap. 
+	 * Code extracted from Java HashMap. 
 	 * This function ensures that hashCodes that differ only by 
 	 * constant multiples at each bit position have a bounded 
 	 * number of collisions (approximately 8 at default load factor).

@@ -148,7 +148,7 @@ public class RobinHood<T> {
 	public static<T> int distinctElements(T[] arr){
 		RobinHood<T> dist = new RobinHood<>();
 		
-		for (T e : arr) { dist.add(e);}
+		for (T e : arr) { dist.add(e); }
 		return dist.size();
 	}
 }
