@@ -1,8 +1,9 @@
 package rsn170330.sp07;
 
 /**
- * Double Hashing Implementation for Short Project 7.
- * Course: CS 5V81.001: Implementation of Data Structures and Algorithms
+ * CS 5V81.001: Implementation of Data Structures and Algorithms
+ * Short Project SP07: Double Hashing Implementation
+ * Team SP43:
  * @author Rahul Nalawade (rsn170330)
  * @author Arunachalam Saravanan (axs170081)
  */

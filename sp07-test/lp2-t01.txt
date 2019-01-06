@@ -1,0 +1,54 @@
+Add 46
+Add 32
+Add 28
+Contains 46
+Add 33
+Add 49
+Contains 28
+Add 29
+Contains 1
+Add 10
+Add 38
+Add 41
+Add 45
+Add 3
+Remove 32
+Contains 10
+Add 36
+Add 8
+Add 6
+Add 31
+Add 26
+Add 42
+Contains 49
+Add 6
+Add 46
+Add 12
+Contains 9
+Add 16
+Add 9
+Add 19
+Add 42
+Add 43
+Add 44
+Add 1
+Contains 16
+Add 39
+Add 48
+Add 6
+Remove 6
+Add 29
+Add 5
+Add 9
+Add 12
+Contains 21
+Add 35
+Contains 15
+Add 44
+Add 38
+Contains 33
+Add 29
+End
+ 
+Output:
+36
