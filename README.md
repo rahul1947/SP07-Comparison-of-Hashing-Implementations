@@ -136,3 +136,18 @@ Comparison Table:
 ```
 NOTE: 
 - In [HashingDriver2.java](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Implementations/blob/master/HashingDriver2.java) kept *numTrials = 10* for the above results. Increasing *numTrials*, the precision of the results could be improved but it would take more resources as Time and Memory. 
+
+-------------------------------------------------------------------------------
+#### COMMENTS:
+
+###### 1. Implementations:
+- If you are new to the hashing, I would've implemented Double Hashing then Robin Hood. And then would have not tried Cuckoo. 
+- **Cuckoo Hashing:** Yes, Cuckoo Hashing is the difficult among three that I've implemented. It's add() method is a bit tricky and you might need to come up with a really good hash functions as you keep on incresing the k. Just barely managed to get correct results for 5 out of 6 test cases (files in sp07/). For the last file lp2-t06.txt, I've managed to come as close as possible to the expected results which can be checked in the sp07-verbose/ directory.
+- I've not implemented Hopscotch Hashing, which one could always try and share help if needed. 
+- **Double Hashing:** It is good for understanding the 'hashing' concepts, like probing sequence, and builds your logic. It is somewhat between easy to moderate in difficulty level.
+- **Robin Hood Hashing:** Robin hood hashing is quite popular and it is not that difficult to implement. I've kept the hash functions simple as compared to double hashing and cuckoo hashing which might be the reasong for its good performance. 
+
+###### 2. Performances:
+- I've started building hash tables with initial capacity = 1024, (unlike Java HashMap/ HashSet capacity = 16). This can be attributed to the fact that these implementations 'look' efficient as compared to Java HashSet.
+- I've tested these implemetation only for 10 Million. You can always compare the performances for larger n. 
+- With the above results I can say performance wise: Cuckoo < Java HashSet = Double Hashing = Robin Hood.  
