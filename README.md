@@ -53,13 +53,14 @@ Cuckoo Hashing result: 721
 Cuckoo Hashing size: 499
 Time: 15 msec.
 Memory: 3 MB / 117 MB.
-
 ```
+
 ```
 For verbose you can use:
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 0 true > sp07-t06-verbose.txt
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 3 true > sp07-t06-cuckoo.txt
 ```
+
 ```
 Comparison Table: 
 +----------------------------------------------------------------------------------------------------------------+
@@ -80,6 +81,8 @@ Comparison Table:
 | lp2-t06.txt |  1000000 |  1168 |    94 / 578 |  1216 |    94 / 581 |  1194 |    60 / 572 |  1744 |   187 / 439 |
 +----------------------------------------------------------------------------------------------------------------+
 ```
+
+**Problem 1:**
 
 b. Generate an array of random integers, and calculate how many distinct numbers it has: 
 ```
@@ -102,7 +105,6 @@ $ java rsn170330.HashingDriver2 1000000 2
 Choice: 2
 Time: 322 msec.
 Memory: 41 MB / 208 MB.
-
 ```
 
 
