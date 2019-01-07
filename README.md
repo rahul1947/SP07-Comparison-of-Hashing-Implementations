@@ -14,6 +14,7 @@ _______________________________________________________________________________
 #### A. Team Task: 
 
 **Problem 1.**
+
 a. Implement one or more hashing algorithms from the following: 
    Double hashing / Robin Hood / Hopscotch / Cuckoo Hashing.
    
@@ -23,25 +24,30 @@ a. Implement one or more hashing algorithms from the following:
 1. [Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
 2. [Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
 3. [Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
+4. [HashingDriver1.java](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Implementations/blob/master/HashingDriver1.java)
 
 ```
 Sample Run: 
 $ javac rsn170330/*.java
+
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 0
 HashSet result: 721
 HashSet size: 499
 Time: 16 msec.
 Memory: 3 MB / 117 MB.
+
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 1
 Double Hashing result: 721
 Double Hashing size: 499
 Time: 17 msec.
 Memory: 3 MB / 117 MB.
+
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 2
 Robin Hood result: 721
 Robin Hood size: 499
 Time: 18 msec.
 Memory: 3 MB / 117 MB.
+
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t03.txt 3
 Cuckoo Hashing result: 721
 Cuckoo Hashing size: 499
@@ -55,6 +61,7 @@ $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 0 true > sp07-t0
 $ java rsn170330.HashingDriver1 rsn170330/sp07-test/lp2-t06.txt 3 true > sp07-t06-cuckoo.txt
 ```
 ```
+Comparison Table: 
 +----------------------------------------------------------------------------------------------------------------+
 | Test        |  No of   |     Java HashSet    |    Double Hashing   |  Robin Hood Hashing |    Cuckoo Hashing   |
 | Files       |  Operta- |---------------------|---------------------|---------------------|---------------------|
@@ -79,7 +86,28 @@ b. Generate an array of random integers, and calculate how many distinct numbers
 static<T> int distinctElements(T[ ] arr) { ... } 
 ```
    Compare running times of HashSet and your hashing implementation, for large n.
+
+**Solution:** 
+1. [Double Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/DoubleHashing.java) 
+2. [Robin Hood Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/RobinHood.java) 
+3. [Cuckoo Hashing](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Algorithms/blob/master/Cuckoo.java)
+4. [HashingDriver2.java](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Implementations/blob/master/HashingDriver2.java)
+5. [sp07b-script-results.txt](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Implementations/blob/master/sp07b-script-results.txt)
+
 ```
+Sample Run:
+$ javac rsn170330/*.java
+
+$ java rsn170330.HashingDriver2 1000000 2
+Choice: 2
+Time: 322 msec.
+Memory: 41 MB / 208 MB.
+
+```
+
+
+```
+Comparison Table: 
 +--------------------------------------------------------------------------------------------------+
 |  Array   |     Java HashSet    |    Double Hashing   |  Robin Hood Hashing |    Cuckoo Hashing   |
 |   Size   |---------------------|---------------------|---------------------|---------------------|
