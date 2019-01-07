@@ -28,15 +28,15 @@ public class DoubleHashing<T> {
 	}
 	
 	public DoubleHashing() {
-		this.table = new Entry[capacity];
-		this.size = 0;
-		this.capacity = 1024;
+		capacity = 1024;
+		table = new Entry[1024];
+		size = 0;
 	}
 	
 	public DoubleHashing(int initialSize) {
-		this.capacity = initialSize;
-		this.table = new Entry[initialSize];
-		this.size = 0;
+		capacity = initialSize;
+		table = new Entry[initialSize];
+		size = 0;
 	}
 	
 	/**
@@ -190,7 +190,7 @@ public class DoubleHashing<T> {
 		
 		// When that location is not NULL AND the elements match AND it is not deleted
 		if (table[location] != null && x.equals(table[location].element) && !table[location].isDeleted) {
-			T result = table[location].element;
+			//T result = table[location].element;
 			table[location].isDeleted = true;
 			size--;
 			return true;

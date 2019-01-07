@@ -1,10 +1,10 @@
-package rsn170330;
+package rsn170330.sp07;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Set;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
  * CS 5V81.001: Implementation of Data Structures and Algorithms

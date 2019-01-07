@@ -18,6 +18,10 @@ public class Timer {
 	public void start() {
 		startTime = System.currentTimeMillis();
 	}
+	
+	public void scale(int num) {
+		elapsedTime /= num;
+	}
 
 	public Timer end() {
 		endTime = System.currentTimeMillis();

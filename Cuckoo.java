@@ -63,7 +63,7 @@ public class Cuckoo<T> {
 			return indexFor(hash(x.hashCode()), hashTable.length); 
 			default:
 				// Hash Function 2, for i > 1  
-			return (hashFunction(1,x) + i * (1 + x.hashCode() % 9)) % hashTable.length;
+			return (hashFunction(1,x) + i * (1 + x.hashCode() % 9)) & (hashTable.length - 1);
 		}
 	}
 	
