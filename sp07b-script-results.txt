@@ -1,0 +1,119 @@
+---------- 1 Million ----------
+Choice: 0
+Time: 379 msec.
+Memory: 153 MB / 242 MB.
+
+Choice: 1
+Time: 448 msec.
+Memory: 166 MB / 353 MB.
+
+Choice: 2
+Time: 317 msec.
+Memory: 41 MB / 208 MB.
+
+Choice: 3
+Time: 1125 msec.
+Memory: 178 MB / 709 MB.
+
+---------- 2 Million ----------
+Choice: 0
+Time: 1004 msec.
+Memory: 194 MB / 454 MB.
+
+Choice: 1
+Time: 1057 msec.
+Memory: 224 MB / 415 MB.
+
+Choice: 2
+Time: 876 msec.
+Memory: 166 MB / 234 MB.
+
+Choice: 3
+Time: 2646 msec.
+Memory: 587 MB / 1258 MB.
+
+---------- 3 Million ----------
+Choice: 0
+Time: 1644 msec.
+Memory: 269 MB / 438 MB.
+
+Choice: 1
+Time: 1684 msec.
+Memory: 226 MB / 515 MB.
+
+Choice: 2
+Time: 1479 msec.
+Memory: 177 MB / 319 MB.
+
+Choice: 3
+Time: 3390 msec.
+Memory: 814 MB / 1210 MB.
+
+---------- 4 Million ----------
+Choice: 0
+Time: 2056 msec.
+Memory: 353 MB / 1963 MB.
+
+Choice: 1
+Time: 2177 msec.
+Memory: 578 MB / 1963 MB.
+
+Choice: 2
+Time: 1871 msec.
+Memory: 334 MB / 1963 MB.
+
+Choice: 3
+Time: 4817 msec.
+Memory: 637 MB / 1820 MB.
+
+---------- 5 Million ----------
+Choice: 0
+Time: 2581 msec.
+Memory: 483 MB / 1963 MB.
+
+Choice: 1
+Time: 2640 msec.
+Memory: 649 MB / 1963 MB.
+
+Choice: 2
+Time: 2532 msec.
+Memory: 353 MB / 1963 MB.
+
+Choice: 3
+Time: 5638 msec.
+Memory: 1349 MB / 1820 MB.
+
+---------- 8 Million ----------
+Choice: 0
+Time: 4402 msec.
+Memory: 796 MB / 1963 MB.
+
+Choice: 1
+Time: 4532 msec.
+Memory: 1180 MB / 1820 MB.
+
+Choice: 2
+Time: 3900 msec.
+Memory: 667 MB / 1963 MB.
+
+Choice: 3
+Time: 17280 msec.
+Memory: 1229 MB / 1820 MB.
+
+---------- 10 Million ----------
+Choice: 0
+Time: 6232 msec.
+Memory: 1043 MB / 2944 MB.
+
+Choice: 1
+Time: 5944 msec.
+Memory: 1066 MB / 2518 MB.
+
+Choice: 2
+Time: 5429 msec.
+Memory: 960 MB / 2944 MB.
+
+Choice: 3
+Time: 15038 msec.
+Memory: 1491 MB / 2731 MB.
+-------------------------------
