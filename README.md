@@ -81,6 +81,10 @@ Comparison Table:
 | lp2-t06.txt |  1000000 |  1168 |    94 / 578 |  1216 |    94 / 581 |  1194 |    60 / 572 |  1744 |   187 / 439 |
 +----------------------------------------------------------------------------------------------------------------+
 ```
+NOTE: 
+- Time is in millisconds and Memory is in MBs
+- Existing Processor: **Intel® Core™ i5-8250U CPU @ 1.60GHz × 8**. Memory: **7.5 GiB**
+
 
 **Problem 1:**
 
@@ -130,3 +134,5 @@ Comparison Table:
 |     10 M |  6232 | 1043 / 2944 |  5944 | 1066 / 2518 |  5429 |  960 / 2944 | 15038 | 1491 / 2731 |
 +--------------------------------------------------------------------------------------------------+
 ```
+NOTE: 
+- Kept *numTrials = 10* for the above results. Increasing *numTrials*, the precision of the results could be improved but it would take more resources as Time and Memory. 
