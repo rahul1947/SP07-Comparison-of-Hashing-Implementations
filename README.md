@@ -142,7 +142,7 @@ NOTE:
 
 ##### 1. Implementations:
 - If you are new to the hashing, would suggest to implement Double Hashing then Robin Hood. And then not to try Cuckoo. 
-- **Cuckoo Hashing:** Yes, Cuckoo Hashing is difficult among three that I've implemented. It's add() method is a bit tricky and we might need to come up with really good hash functions as we keep on increasing the k. Just barely managed to get correct results for 5 out of 6 test cases (files in sp07/). For the last file lp2-t06.txt, I've managed to come as close as possible to the expected results which can be checked in the sp07-verbose/ directory.
+- **Cuckoo Hashing:** Yes, Cuckoo Hashing is difficult among three that I've implemented. It's add() method is a bit tricky and we might need to come up with really good hash functions as we keep on increasing the k. Just barely managed to get correct results for 5 out of 6 test cases (files in [sp07-test](https://github.com/rahul1947/SP07-Comparison-of-Hashing-Implementations/tree/master/sp07-test)). For the last file lp2-t06.txt, I've managed to come as close as possible to the expected results which can be checked in the sp07-verbose/ directory.
 - I've not implemented Hopscotch Hashing, which one could always try and share help if needed. 
 - **Double Hashing:** It is good for understanding the 'hashing' concepts, like probing sequence, and builds our logic. It is somewhat between easy to moderate in difficulty level.
 - **Robin Hood Hashing:** Robin hood hashing is quite popular and it is not that difficult to implement. I've kept the hash functions simple as compared to double hashing and cuckoo hashing which might be the reason for its quick computations. 

@@ -1,3 +1,5 @@
+#! /bin/bash
+
 javac rsn170330/*.java
 echo "---------- 1 Million ----------"
 java rsn170330.HashingDriver2 1000000 0
@@ -62,3 +64,5 @@ java -Xms3g rsn170330.HashingDriver2 10000000 2
 echo ''
 java -Xms3g rsn170330.HashingDriver2 10000000 3
 echo "-------------------------------"
+
+exit 0
